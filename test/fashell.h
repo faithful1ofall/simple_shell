@@ -111,7 +111,7 @@ typedef struct builtin
 
 
 /* fshell_start.c */
-int hsh(finfo_a *, char **);
+int shell(finfo_a *, char **);
 int find_builtin(finfo_a *);
 void find_cmd(finfo_a *);
 void fork_cmd(finfo_a *);
