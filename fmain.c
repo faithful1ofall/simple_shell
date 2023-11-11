@@ -39,6 +39,6 @@ int main(int ac, char **av)
 	}
 	fpop_env_list(finfo);
 	read_fhistory(finfo);
-	hsh(finfo, av);
+	shell(finfo, av);
 	return (EXIT_SUCCESS);
 }
