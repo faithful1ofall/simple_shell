@@ -1,13 +1,13 @@
 #include "fashell.h"
 
 /**
- * hsh - main shell loop
+ * shell - main shell loop
  * @finfo: the parameter & return finfo struct
  * @av: the argument vector from main()
  *
  * Return: 0 on success, 1 on error, or error code
  */
-int hsh(finfo_a *finfo, char **av)
+int shell(finfo_a *finfo, char **av)
 {
 	ssize_t r = 0;
 	int builtin_ret = 0;
