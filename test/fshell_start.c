@@ -63,7 +63,7 @@ int find_builtin(finfo_a *finfo)
 		{"setenv", _fmsetenv},
 		{"unsetenv", _funsetenv},
 		{"cd", _fcd},
-		{"falias", _myfalias},
+		{"alias", _myfalias},
 		{NULL, NULL}
 	};
 
@@ -132,7 +132,6 @@ void fork_cmd(finfo_a *finfo)
 	child_pid = fork();
 	if (child_pid == -1)
 	{
-		/* TODO: PUT ERROR FUNCTION */
 		perror("Error:");
 		return;
 	}
@@ -145,7 +144,6 @@ void fork_cmd(finfo_a *finfo)
 				exit(126);
 			exit(1);
 		}
-		/* TODO: PUT ERROR FUNCTION */
 	}
 	else
 	{
