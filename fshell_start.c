@@ -63,7 +63,7 @@ int find_builtin(finfo_a *finfo)
 		{"setenv", _fmsetenv},
 		{"unsetenv", _funsetenv},
 		{"cd", _fcd},
-		{"falias", _myfalias},
+		{"alias", _myfalias},
 		{NULL, NULL}
 	};
 
