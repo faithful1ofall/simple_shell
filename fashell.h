@@ -17,10 +17,10 @@
 #define FBUF_FLUSH -1
 
 /* for command chaining */
-#define FMD_AND		2
-#define FMD_CHAIN	3
 #define FMD_N		0
 #define FMD_OR		1
+#define FMD_AND		2
+#define FMD_CHAIN	3
 
 
 /* for convert_number() */
