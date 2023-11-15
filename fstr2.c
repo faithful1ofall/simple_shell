@@ -81,7 +81,7 @@ int _putchar(char c)
 	static int i;
 	static char buf[FWBUF_SIZE];
 
-	if (c == FWBUF_SIZE || i >= FBUF_SIZE)
+	if (c == FBUF_FLUSH || i >= FWBUF_SIZE)
 	{
 		write(1, buf, i);
 		i = 0;
