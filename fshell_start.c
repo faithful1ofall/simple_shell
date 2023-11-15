@@ -109,7 +109,7 @@ void find_cmd(finfo_a *finfo)
 	else
 	{
 		if ((interact(finfo) || _fgetenv(finfo, "PATH=")
-			|| (*finfo).argv[0][0] == '/') && fcmd(finfo, (*finfo).argv[0]))
+			|| finfo->argv[0][0] == '/') && fcmd(finfo, (*finfo).argv[0]))
 			fork_cmd(finfo);
 		else if (*(finfo->arg) != '\n')
 		{
