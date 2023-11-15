@@ -22,7 +22,6 @@ ssize_t input_buf(finfo_a *finfo, char **buf, size_t *len)
 
 #if FUSE_GET
 			r = getline(buf, &len_p, stdin);
-		
 #else
 			r = _fgetline(finfo, buf, &len_p);
 #endif
