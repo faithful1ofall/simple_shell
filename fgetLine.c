@@ -25,7 +25,7 @@ ssize_t input_buf(finfo_a *finfo, char **buf, size_t *len)
 		
 #else
 			r = _fgetline(finfo, buf, &len_p);
-#fi
+#endif
 		if (r > 0)
 		{
 			if ((*buf)[r - 1] == '\n')
