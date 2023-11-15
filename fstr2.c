@@ -79,9 +79,9 @@ void _puts(char *fstr)
 int _putchar(char c)
 {
 	static int i;
-	static char buf[FBUF_SIZE];
+	static char buf[FWBUF_SIZE];
 
-	if (c == FBUF_FLUSH || i >= FBUF_SIZE)
+	if (c == FWBUF_SIZE || i >= FBUF_SIZE)
 	{
 		write(1, buf, i);
 		i = 0;
