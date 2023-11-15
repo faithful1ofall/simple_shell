@@ -111,7 +111,7 @@ void find_cmd(finfo_a *finfo)
 		if ((interact(finfo) || _fgetenv(finfo, "PATH=")
 			|| finfo->argv[0][0] == '/') && fcmd(finfo, finfo->argv[0]))
 			fork_cmd(finfo);
-		else if (*(finfo->arg) != '\n' && _strcmp(finfo->argv[0], "/") != 0)
+		else if (*(finfo->arg) != '\n')
 		{
 			finfo->status = 127;
 			print_error(finfo, "not found\n");
