@@ -100,10 +100,10 @@ void find_cmd(finfo_a *finfo)
 	if (!k)
 		return;
 
-	path = find_fpath(finfo, _fgetenv(finfo, "PATH="), (*finfo).argv[0]);
+	path = find_fpath(finfo, _fgetenv(finfo, "PATH="), finfo->argv[0]);
 	if (path)
 	{
-		(*finfo).path = path;
+		finfo->path = path;
 		fork_cmd(finfo);
 	}
 	else
