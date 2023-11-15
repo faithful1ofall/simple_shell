@@ -20,11 +20,12 @@ ssize_t input_buf(finfo_a *finfo, char **buf, size_t *len)
 		*buf = NULL;
 		signal(SIGINT, sigintHandler);
 
-		if (fileno(stdin) == 0)
+#if FUSE_GET
 			r = getline(buf, &len_p, stdin);
-		else
+		
+#else
 			r = _fgetline(finfo, buf, &len_p);
-
+#fi
 		if (r > 0)
 		{
 			if ((*buf)[r - 1] == '\n')
