@@ -14,7 +14,7 @@
 
 /* for read/write buffers */
 #define FBUF_SIZE 1024
-#define FwBUF_SIZE 1024
+#define FWBUF_SIZE 1024
 #define FBUF_FLUSH -1
 
 /* for command chaining */
