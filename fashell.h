@@ -13,7 +13,7 @@
 #include <errno.h>
 
 /* for read/write buffers */
-#define FBUF_SIZE 2024
+#define FBUF_SIZE 1024
 #define FWBUF_SIZE 1024
 #define FBUF_FLUSH -1
 
@@ -29,7 +29,7 @@
 #define FCONV_UNS	2
 
 /* 1 for default system getline() else use the custom _fgetline */
-#define FUSE_GET 0
+#define FUSE_GET 1
 
 #define FHIST_FILE	".simple_shell_fhistory"
 #define FHIST_MAX	4096
